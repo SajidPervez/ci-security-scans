@@ -1,0 +1,12 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+      ls -la
+      sudo chmod u+x ci-dast-dev.sh
+      ./ci-dast-dev.sh
+  displayName: 'Runing ci-dast-dev.sh'
